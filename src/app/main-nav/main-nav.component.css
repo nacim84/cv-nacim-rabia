@@ -1,12 +1,9 @@
 .sidenav-container {
   height: 100%;
-}
-
-.sidenav {
-  width: 200px;
+  width: 100%;
 }
 
 .mat-toolbar.mat-primary {
-  position: sticky;
+  position: relative;
   top: 0;
 }
