@@ -10,10 +10,11 @@ import { CompetencesComponent } from './competences/competences.component';
 import { OthersComponent } from './others/others.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
+import { DataTableComponent } from './data-table/data-table.component';
 
 
 const appRoutes: Routes = [
@@ -21,6 +22,7 @@ const appRoutes: Routes = [
   {path: 'experiences', component: ExperiencesComponent},
   {path: 'formations', component: FormationsComponent},
   {path: 'competences', component: CompetencesComponent},
+  {path: 'datatable', component: DataTableComponent},
   {path: 'others', component: OthersComponent}
 ];
 
@@ -32,7 +34,8 @@ const appRoutes: Routes = [
     FormationsComponent,
     CompetencesComponent,
     OthersComponent,
-    MainNavComponent
+    MainNavComponent,
+    DataTableComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +51,10 @@ const appRoutes: Routes = [
       { enableTracing: true } // <-- debugging purposes only
     ),
     MatGridListModule,
-    MatCardModule
+    MatCardModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
